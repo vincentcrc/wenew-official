@@ -1,0 +1,110 @@
+media:
+  input: assets/uploads
+  output: assets/uploads
+
+content:
+  - name: news
+    label: 新闻 News
+    type: file
+    path: content/news.json
+    fields:
+      - name: items
+        label: 新闻列表
+        type: object
+        list: true
+        fields:
+          - { name: date, label: 日期 Date, type: date }
+          - name: category
+            label: 分类 Category
+            type: select
+            options:
+              values: [INFO, RELEASE, LIVE, MEDIA, GOODS]
+          - { name: title_zh, label: 标题（中文）, type: string }
+          - { name: title_en, label: Title (English), type: string }
+          - { name: title_ja, label: タイトル（日本語）, type: string }
+          - { name: title_ko, label: 제목（한국어）, type: string }
+          - { name: body_zh, label: 正文（中文）, type: text }
+          - { name: body_en, label: Body (English), type: text }
+          - { name: body_ja, label: 本文（日本語）, type: text }
+          - { name: body_ko, label: 본문（한국어）, type: text }
+          - { name: link, label: 外部链接 Link (可选), type: string }
+
+  - name: shows
+    label: 演出 Live
+    type: file
+    path: content/shows.json
+    fields:
+      - name: items
+        label: 演出列表
+        type: object
+        list: true
+        fields:
+          - { name: date, label: 日期 Date, type: date }
+          - { name: time, label: 时间 Time (如 19:30), type: string }
+          - { name: title_zh, label: 演出名称（中文）, type: string }
+          - { name: title_en, label: Title (English), type: string }
+          - { name: title_ja, label: 公演名（日本語）, type: string }
+          - { name: title_ko, label: 공연명（한국어）, type: string }
+          - { name: city_zh, label: 城市（中文）, type: string }
+          - { name: city_en, label: City (English), type: string }
+          - { name: city_ja, label: 都市（日本語）, type: string }
+          - { name: city_ko, label: 도시（한국어）, type: string }
+          - { name: venue_zh, label: 场馆（中文）, type: string }
+          - { name: venue_en, label: Venue (English), type: string }
+          - { name: venue_ja, label: 会場（日本語）, type: string }
+          - { name: venue_ko, label: 공연장（한국어）, type: string }
+          - { name: ticket_url, label: 购票链接 Ticket URL, type: string }
+          - name: status
+            label: 状态 Status
+            type: select
+            options:
+              values:
+                - { value: onsale, label: 售票中 On Sale }
+                - { value: coming, label: 即将开售 Coming Soon }
+                - { value: soldout, label: 售罄 Sold Out }
+
+  - name: goods
+    label: 周边 Goods
+    type: file
+    path: content/goods.json
+    fields:
+      - name: items
+        label: 周边列表
+        type: object
+        list: true
+        fields:
+          - { name: name_zh, label: 商品名（中文）, type: string }
+          - { name: name_en, label: Name (English), type: string }
+          - { name: name_ja, label: 商品名（日本語）, type: string }
+          - { name: name_ko, label: 상품명（한국어）, type: string }
+          - { name: price, label: 价格 Price (如 ¥199), type: string }
+          - { name: image, label: 商品图片 Image, type: image }
+          - { name: url, label: 购买链接 Shop URL, type: string }
+
+  - name: about
+    label: 关于我们 About
+    type: file
+    path: content/about.json
+    fields:
+      - { name: photo, label: 页面照片 Photo, type: image }
+      - { name: lead_zh, label: 引言（中文）, type: text }
+      - { name: lead_en, label: Lead (English), type: text }
+      - { name: lead_ja, label: リード文（日本語）, type: text }
+      - { name: lead_ko, label: 리드（한국어）, type: text }
+      - { name: body_zh, label: 正文（中文）, type: text }
+      - { name: body_en, label: Body (English), type: text }
+      - { name: body_ja, label: 本文（日本語）, type: text }
+      - { name: body_ko, label: 본문（한국어）, type: text }
+      - name: members
+        label: 成员 Members
+        type: object
+        list: true
+        fields:
+          - { name: role_zh, label: 位置（中文，如 主唱）, type: string }
+          - { name: role_en, label: Role (English, e.g. Vocal), type: string }
+          - { name: role_ja, label: パート（日本語）, type: string }
+          - { name: role_ko, label: 포지션（한국어）, type: string }
+          - { name: name_zh, label: 名字（中文）, type: string }
+          - { name: name_en, label: Name (English), type: string }
+          - { name: name_ja, label: 名前（日本語）, type: string }
+          - { name: name_ko, label: 이름（한국어）, type: string }

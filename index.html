@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeNew威牛 | Official Site</title>
+<meta name="description" content="WeNew威牛 Official Website — News, Live, Goods, About">
+<meta property="og:title" content="WeNew威牛 | Official Site">
+<meta property="og:image" content="assets/band-wide.jpg">
+<link rel="icon" type="image/png" href="assets/logo-black.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-view="home">
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="siteHeader">
+  <a class="header-logo" href="#/" aria-label="WeNew Home">
+    <img src="assets/logo-white-small.png" alt="WeNew" class="logo-img logo-img--white">
+    <img src="assets/logo-black.png" alt="WeNew" class="logo-img logo-img--black">
+  </a>
+  <div class="header-right">
+    <button class="lang-btn" id="langBtn" aria-label="Language">
+      <span id="langCurrent">中</span>
+    </button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <span class="menu-btn-line"></span>
+      <span class="menu-btn-line"></span>
+      <span class="menu-btn-label" data-i18n="menu">MENU</span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Language panel ===== -->
+<div class="lang-panel" id="langPanel">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">English</button>
+  <button data-lang="ja">日本語</button>
+  <button data-lang="ko">한국어</button>
+</div>
+
+<!-- ===== Fullscreen menu ===== -->
+<nav class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <div class="menu-bg"></div>
+  <ul class="menu-list">
+    <li><a href="#/about" class="menu-link"><span class="menu-idx">01</span><span class="menu-en">ABOUT</span><span class="menu-local" data-i18n="nav_about">关于我们</span></a></li>
+    <li><a href="#/news"  class="menu-link"><span class="menu-idx">02</span><span class="menu-en">NEWS</span><span class="menu-local" data-i18n="nav_news">新闻</span></a></li>
+    <li><a href="#/goods" class="menu-link"><span class="menu-idx">03</span><span class="menu-en">GOODS</span><span class="menu-local" data-i18n="nav_goods">周边</span></a></li>
+    <li><a href="#/live"  class="menu-link"><span class="menu-idx">04</span><span class="menu-en">LIVE</span><span class="menu-local" data-i18n="nav_live">演出</span></a></li>
+  </ul>
+  <div class="menu-foot">
+    <div class="menu-langs">
+      <button data-lang="zh">中文</button><i>/</i>
+      <button data-lang="en">EN</button><i>/</i>
+      <button data-lang="ja">日本語</button><i>/</i>
+      <button data-lang="ko">한국어</button>
+    </div>
+    <p class="menu-copy">© WeNew威牛</p>
+  </div>
+</nav>
+
+<!-- ===== Home ===== -->
+<section class="hero" id="view-home">
+  <div class="hero-media"><img src="assets/band.jpg" alt="WeNew威牛"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">OFFICIAL SITE</p>
+    <img class="hero-logo" src="assets/logo-white.png" alt="WeNew威牛">
+    <p class="hero-sub">WeNew<span>威牛</span></p>
+  </div>
+  <div class="hero-scroll" id="heroScroll">
+    <span data-i18n="explore">进入</span>
+    <span class="hero-scroll-line"></span>
+  </div>
+</section>
+
+<!-- ===== Pages ===== -->
+<main class="page-wrap" id="pageWrap">
+
+  <section class="page" id="view-about">
+    <div class="page-head">
+      <h1 class="page-title">ABOUT</h1>
+      <p class="page-title-local" data-i18n="nav_about">关于我们</p>
+    </div>
+    <div class="page-body" id="aboutBody"></div>
+  </section>
+
+  <section class="page" id="view-news">
+    <div class="page-head">
+      <h1 class="page-title">NEWS</h1>
+      <p class="page-title-local" data-i18n="nav_news">新闻</p>
+    </div>
+    <div class="page-body" id="newsBody"></div>
+  </section>
+
+  <section class="page" id="view-goods">
+    <div class="page-head">
+      <h1 class="page-title">GOODS</h1>
+      <p class="page-title-local" data-i18n="nav_goods">周边</p>
+    </div>
+    <div class="page-body" id="goodsBody"></div>
+  </section>
+
+  <section class="page" id="view-live">
+    <div class="page-head">
+      <h1 class="page-title">LIVE</h1>
+      <p class="page-title-local" data-i18n="nav_live">演出</p>
+    </div>
+    <div class="page-body" id="liveBody"></div>
+  </section>
+
+  <footer class="site-foot">
+    <img src="assets/logo-white-small.png" alt="WeNew" class="foot-logo">
+    <p>© <span id="footYear"></span> WeNew威牛. All rights reserved.</p>
+  </footer>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
