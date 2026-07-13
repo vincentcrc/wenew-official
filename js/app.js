@@ -19,11 +19,9 @@
           more:'자세히 보기', shop:'구매하기', htmlLang:'ko', short:'한' },
   };
 
+  // 默认中文；访客手动切换后记住其选择
   let lang = localStorage.getItem('wenew_lang');
-  if (!LANGS.includes(lang)) {
-    const nav = (navigator.language || 'zh').toLowerCase();
-    lang = nav.startsWith('zh') ? 'zh' : nav.startsWith('ja') ? 'ja' : nav.startsWith('ko') ? 'ko' : 'en';
-  }
+  if (!LANGS.includes(lang)) lang = 'zh';
 
   const t = (key) => (UI[lang] && UI[lang][key]) || UI.zh[key] || key;
   /** pick localized field from content object: f(item,'title') -> item.title_zh etc. with fallback */
