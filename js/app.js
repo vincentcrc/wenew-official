@@ -192,7 +192,9 @@
   document.querySelectorAll('[data-lang]').forEach((b) =>
     b.addEventListener('click', () => { lang = b.dataset.lang; applyLang(); closeLang(); }));
 
-  document.getElementById('heroScroll').addEventListener('click', () => { location.hash = '#/about'; });
+  const heroScroll = document.getElementById('heroScroll');
+  heroScroll.addEventListener('click', () => { location.hash = '#/about'; });
+  heroScroll.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') location.hash = '#/about'; });
   document.getElementById('footYear').textContent = new Date().getFullYear();
 
   window.addEventListener('scroll', () => document.body.classList.toggle('scrolled', scrollY > 40));
