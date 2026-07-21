@@ -325,6 +325,9 @@ a.live-cta:hover{background:var(--ink);color:var(--bg)}
 }
 .foot-logo{height:22px;opacity:.55}
 .site-foot p{font-size:11px;color:var(--ink-dim);letter-spacing:.2em}
+.foot-icp{margin-top:-8px}
+.foot-icp a{color:var(--ink-dim);text-decoration:none;opacity:.8}
+.foot-icp a:hover{opacity:1;text-decoration:underline}
 
 /* ================= Responsive ================= */
 @media (max-width:760px){
