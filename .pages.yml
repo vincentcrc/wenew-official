@@ -19,6 +19,7 @@ content:
             type: select
             options:
               values: [INFO, RELEASE, LIVE, MEDIA, GOODS]
+          - { name: image, label: 图片 Image (可选), type: image }
           - { name: title_zh, label: 标题（中文）, type: string }
           - { name: title_en, label: Title (English), type: string }
           - { name: title_ja, label: タイトル（日本語）, type: string }

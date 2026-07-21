@@ -73,8 +73,9 @@
     const sorted = [...items].sort((a, b) => String(b.date).localeCompare(String(a.date)));
     box.innerHTML = sorted.map((n, i) => {
       const body = pick(n, 'body');
+      const img = n.image ? `<img class="news-img" src="${esc(n.image)}" alt="${esc(pick(n, 'title'))}" loading="lazy">` : '';
       const link = n.link ? `\n<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(t('more'))} ↗</a>` : '';
-      const hasDetail = body || n.link;
+      const hasDetail = body || n.link || n.image;
       return `
       <div class="news-item" data-i="${i}">
         <button class="news-row" ${hasDetail ? '' : 'disabled'}>
@@ -83,7 +84,7 @@
           <span class="news-title">${esc(pick(n, 'title'))}</span>
           <span class="news-arrow">${hasDetail ? '+' : ''}</span>
         </button>
-        ${hasDetail ? `<div class="news-detail"><div class="news-detail-inner">${esc(body)}${link}</div></div>` : ''}
+        ${hasDetail ? `<div class="news-detail"><div class="news-detail-inner">${img}${esc(body)}${link}</div></div>` : ''}
       </div>`;
     }).join('');
     box.querySelectorAll('.news-item').forEach((item) => {

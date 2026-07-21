@@ -270,6 +270,7 @@ body:not([data-view="home"]) .hero{display:none}
 }
 .news-detail-inner{padding:4px 6px 30px 128px;color:var(--ink-dim);font-size:14.5px;white-space:pre-line;max-width:760px}
 .news-detail-inner a{color:var(--accent);border-bottom:1px solid var(--accent-2)}
+.news-img{display:block;width:min(380px,100%);aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line);margin:8px 0 22px}
 
 /* ---------- Live ---------- */
 .live-item{
