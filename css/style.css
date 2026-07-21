@@ -202,6 +202,7 @@ body.menu-open .menu-foot{opacity:1}
 
 /* 移动端：保留竖排样式，略微放大 */
 @media (max-width:760px){
+  .hero-media img{animation:none;transform:none}
   .hero-scroll{
     right:clamp(24px,5vw,64px);bottom:0;
     display:flex;flex-direction:column;align-items:center;gap:14px;
